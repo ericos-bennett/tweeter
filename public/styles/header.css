@@ -1,4 +1,4 @@
-header {
+body > header {
   height: 400px;
   width: 100%;
   display: flex;
@@ -9,6 +9,6 @@ header {
   background-color: rgba(131, 65, 21, 0.787);
 }
 
-header h2 {
+body > header h2 {
   margin: 0;
 }
