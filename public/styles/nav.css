@@ -1,0 +1,20 @@
+/* CSS for Tweeter's NavBar */
+
+nav {
+  height: 120px;
+  width: 100vw;
+  padding: 1.5em;
+  background-color: #4056A1;
+  color: #FFFFFF;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* #brand {
+  font-family: 'Bungee', cursive;
+} */
+
+nav > span:first-child {
+  font-family: 'Bungee', cursive;
+}
