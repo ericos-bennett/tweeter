@@ -11,10 +11,6 @@ nav {
   align-items: center;
 }
 
-/* #brand {
-  font-family: 'Bungee', cursive;
-} */
-
-nav > span:first-child {
+#brand {
   font-family: 'Bungee', cursive;
 }
