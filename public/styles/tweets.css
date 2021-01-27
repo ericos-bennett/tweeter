@@ -41,7 +41,7 @@
   align-items: center;
 }
 
-.tweet footer .icons img {
+.tweet .icons svg {
   margin-left: 0.5em;
 }
 
@@ -52,4 +52,8 @@
 
 .tweet:hover .user-handler {
   display: unset;
+}
+
+.tweet:hover svg {
+  stroke-width: 3;
 }
