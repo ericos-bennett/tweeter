@@ -13,6 +13,7 @@
   background-color: transparent;
   border-width: 0 0 4px 0;
   resize: none;
+  overflow: auto;
 }
 
 #tweet-text:focus{

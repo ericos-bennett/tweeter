@@ -2,7 +2,6 @@
   margin: 2em 0;
   padding: 1em;
   border: 4px solid rgb(118, 118, 118);
-  
 }
 
 .tweet header {
@@ -10,11 +9,11 @@
   align-items: center;
 }
 
-.tweet header .username {
+.tweet .username {
   margin-left: 0.5em;
 }
 
-.tweet header .user-handle {
+.tweet .user-handle {
   margin-left: auto;
   display: none;
 }
@@ -30,13 +29,13 @@
   text-align: center;
 }
 
-.tweet footer .time-since-post {
+.tweet .time-since-post {
   font-size: 0.75em;
   display: inline-flex;
   align-items: center;
 }
 
-.tweet footer .icons {
+.tweet .icons {
   display: inline-flex;
   align-items: center;
 }
