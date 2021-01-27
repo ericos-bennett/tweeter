@@ -15,7 +15,8 @@
 }
 
 .tweet header .user-handler {
-  margin-left: auto
+  margin-left: auto;
+  display: none;
 }
 
 .tweet p {
@@ -42,4 +43,13 @@
 
 .tweet footer .icons img {
   margin-left: 0.5em;
+}
+
+.tweet:hover {
+  box-shadow: 10px 10px rgba(64,86,161,0.2);
+  font-weight: 600;
+}
+
+.tweet:hover .user-handler {
+  display: unset;
 }
