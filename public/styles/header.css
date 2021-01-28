@@ -11,6 +11,13 @@ body > header {
   background-color: rgba(131, 65, 21, 0.787);
 }
 
-body > header h2 {
+#header-username {
   margin: 0;
+}
+
+#header-profile-photo {
+  position: absolute;
+  width: 128px;
+  left: 50%;
+  transform: translate(-50%, 50%);
 }

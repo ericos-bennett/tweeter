@@ -2,7 +2,13 @@
 /* eslint-env browser */
 
 $(document).ready(() => {
-  
+
+  const user = {
+    name: 'Eric Bennett',
+    handle: '@ericos',
+    avatars: 'https://i.imgur.com/DVpDmdR.png'
+  };
+
   const createTweetElement = function(tweet) {
     let $tweet = $(`
       <article class="tweet">
@@ -47,19 +53,43 @@ $(document).ready(() => {
   $('.new-tweet form').on('submit', function(event) {
     
     event.preventDefault();
+    
+    // Form validation and AJAX POST request if correct length
+    if ($('#tweet-text').val() === '' || $('#tweet-text').val() === null) {
+      alert('Please enter a message for your tweet!');
+    } else if ($('#tweet-text').val().length > 140) {
+      alert('Your tweet is too long (max 140 characters).');
+    } else {
 
-    $.ajax('../tweets', {
-      method: 'POST',
-      data: $(this).serialize()
-    }).then(() => {
-      loadTweets();
-    }).catch(err => {
-      console.log(err);
-    });
+      console.log(user);
+
+      const serializedText = $(this).serialize();
+      const serializedName = `name=${encodeURIComponent(user.name)}`;
+      const serializedHandle = `handle=${user.handle}`;
+      const serializedAvatars = `avatars=${user.avatars}`;
+
+      const serializedData = `${serializedText}&${serializedName}&${serializedHandle}&${serializedAvatars}`;
+
+      console.log(serializedData);
+
+      $.ajax('../tweets', {
+        method: 'POST',
+        data: serializedData
+      }).then(() => {
+        loadTweets();
+        $('#tweet-text').val('');
+      }).catch(err => {
+        console.log(err);
+      });
+    }
 
   });
 
   // Load tweets on page load
   loadTweets();
+
+  // Add the user's name and image to the header
+  $('#header-username').html(`${user.name}`);
+  $('body > header div:first-child').append(`<img src=${user.avatars} alt="User Profile Image" id="header-profile-photo">`);
 
 });

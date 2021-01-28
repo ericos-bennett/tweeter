@@ -9,6 +9,10 @@
   align-items: center;
 }
 
+.tweet header img {
+  width: 64px;
+}
+
 .tweet .username {
   margin-left: 0.5em;
 }
