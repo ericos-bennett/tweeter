@@ -64,6 +64,12 @@ $(document).ready(() => {
     }
   };
 
+  // New tweet drop down handler
+  $('#tweet-dropdown').on('click', () => {
+    $('.new-tweet').hide().css('display', 'unset').slideDown();
+    $('#tweet-text').focus();
+  });
+
   // Tweet submission handler
   $('.new-tweet form').on('submit', function(event) {
     
@@ -91,7 +97,7 @@ $(document).ready(() => {
         method: 'POST',
         data: serializedData
       }).then((result) => {
-        renderTweets([result]);
+        createTweetElement(result).hide().prependTo('#tweets-container').slideDown();
         $('#tweet-text').val('');
       }).catch(err => {
         console.log(err);

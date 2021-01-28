@@ -16,4 +16,12 @@ nav {
 
 #brand {
   font-family: 'Bungee', cursive;
+  padding: 0.5em;
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+#tweet-dropdown {
+  cursor: pointer;
+  padding: 0.5em;
 }
