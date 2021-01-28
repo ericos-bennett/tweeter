@@ -56,6 +56,14 @@ $(document).ready(() => {
 
   };
 
+  const showErrorBox = (errorMsg) => {
+    if ($('#error-box').length) {
+      $('#error-box').html(`<p>❗ ${errorMsg} ❗</p>`);
+    } else {
+      $(`<div id="error-box"><p>❗ ${errorMsg} ❗</p></div>`).hide().prependTo('.new-tweet').slideDown();
+    }
+  };
+
   // Tweet submission handler
   $('.new-tweet form').on('submit', function(event) {
     
@@ -63,10 +71,14 @@ $(document).ready(() => {
     
     // Form validation and AJAX POST request if correct length
     if ($('#tweet-text').val().trim() === '' || $('#tweet-text').val() === null) {
-      alert('Please enter a message for your tweet!');
+      showErrorBox('Please enter a message for your tweet');
     } else if ($('#tweet-text').val().length > 140) {
-      alert('Your tweet is too long (max 140 characters).');
+      showErrorBox('Your tweet is too long (max 140 characters)');
     } else {
+
+      $('#error-box').slideUp(function() {
+        this.remove();
+      });
 
       const serializedText = $(this).serialize();
       const serializedName = `name=${encodeURIComponent(user.name)}`;
