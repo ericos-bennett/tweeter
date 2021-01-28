@@ -3,6 +3,7 @@
 
 $(document).ready(() => {
 
+  // Initialize constants for the signed in user
   const user = {
     name: 'Eric Bennett',
     handle: '@ericos',
@@ -61,8 +62,6 @@ $(document).ready(() => {
       alert('Your tweet is too long (max 140 characters).');
     } else {
 
-      console.log(user);
-
       const serializedText = $(this).serialize();
       const serializedName = `name=${encodeURIComponent(user.name)}`;
       const serializedHandle = `handle=${user.handle}`;
@@ -70,22 +69,21 @@ $(document).ready(() => {
 
       const serializedData = `${serializedText}&${serializedName}&${serializedHandle}&${serializedAvatars}`;
 
-      console.log(serializedData);
-
       $.ajax('../tweets', {
         method: 'POST',
         data: serializedData
-      }).then(() => {
-        loadTweets();
+      }).then((result) => {
+        renderTweets([result]);
         $('#tweet-text').val('');
       }).catch(err => {
         console.log(err);
       });
+      
     }
 
   });
 
-  // Load tweets on page load
+  // Load tweets on document ready
   loadTweets();
 
   // Add the user's name and image to the header
