@@ -10,6 +10,12 @@ $(document).ready(() => {
     avatars: 'https://i.imgur.com/DVpDmdR.png'
   };
 
+  const escape = function(str) {
+    let div = document.createElement('div');
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  };
+
   const createTweetElement = function(tweet) {
     let $tweet = $(`
       <article class="tweet">
@@ -18,7 +24,7 @@ $(document).ready(() => {
           <span class="username">${tweet.user.name}</span>
           <span class="user-handle">${tweet.user.handle}</span>
         </header>
-        <p>${tweet.content.text}</p>
+        <p>${escape(tweet.content.text)}</p>
         <footer>
           <span class="time-since-post">${tweet.createdAt}</span>
           <div class="icons">
@@ -56,7 +62,7 @@ $(document).ready(() => {
     event.preventDefault();
     
     // Form validation and AJAX POST request if correct length
-    if ($('#tweet-text').val() === '' || $('#tweet-text').val() === null) {
+    if ($('#tweet-text').val().trim() === '' || $('#tweet-text').val() === null) {
       alert('Please enter a message for your tweet!');
     } else if ($('#tweet-text').val().length > 140) {
       alert('Your tweet is too long (max 140 characters).');
@@ -78,7 +84,7 @@ $(document).ready(() => {
       }).catch(err => {
         console.log(err);
       });
-      
+
     }
 
   });
