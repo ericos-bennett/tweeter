@@ -27,6 +27,7 @@
 .tweet p {
   border-bottom: 4px solid rgb(118, 118, 118);
   padding-bottom: 0.5em;
+  word-wrap: break-word;
 }
 
 .tweet footer {
@@ -57,6 +58,7 @@
 
 .tweet:hover .user-handle {
   display: unset;
+  opacity: 0.5;
 }
 
 .tweet:hover svg {
