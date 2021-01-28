@@ -22,6 +22,29 @@ nav {
 }
 
 #tweet-dropdown {
+  position: relative;
   cursor: pointer;
   padding: 0.5em;
+}
+
+@keyframes updown {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(20%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+nav i {
+  font-size: 0.8em;
+  position: absolute;
+  left: 50%;
+  top: 75%;
+  transform: translate(-50%, 0);
+  animation: updown 2s ease infinite;
+  color: orange
 }

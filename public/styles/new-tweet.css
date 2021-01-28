@@ -38,7 +38,7 @@
 
 #error-box {
   height: 2em;
-  margin-bottom: 1em;
+  margin: 1em 0;
   display: flex;
   align-items: center;
   justify-content: center;
