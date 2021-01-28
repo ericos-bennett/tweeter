@@ -1,0 +1,35 @@
+@media screen and (min-width: 1024px) {
+   
+  body {
+    display: flex;
+  }
+
+  nav {
+    background-color: #4056A1;
+  }
+
+  body > header {
+    margin: 2em;
+    margin-top: calc(80px + 2em);
+    width: 60%;
+    max-width: 400px;
+  }
+
+  main {
+    margin: calc(80px + 2em) 2em 0 2em
+  }
+
+  .new-tweet > form {
+    margin-top: 0;
+    margin-bottom: 2em;
+  }
+
+  #error-box {
+    margin-top: 0;
+  }
+
+  .tweet {
+    margin-top: 0
+  }
+
+ }

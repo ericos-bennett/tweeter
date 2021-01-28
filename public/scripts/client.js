@@ -10,6 +10,7 @@ $(document).ready(() => {
     avatars: 'https://i.imgur.com/DVpDmdR.png'
   };
 
+  // Escape potentially dangerous user input
   const escape = function(str) {
     let div = document.createElement('div');
     div.appendChild(document.createTextNode(str));
