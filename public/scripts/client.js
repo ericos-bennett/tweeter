@@ -66,7 +66,7 @@ $(document).ready(() => {
 
   // New tweet drop down handler
   $('#tweet-dropdown').on('click', () => {
-    $('.new-tweet').hide().css('display', 'unset').slideDown();
+    $('.new-tweet').slideToggle();
     $('#tweet-text').focus();
   });
 
