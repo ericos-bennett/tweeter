@@ -1,8 +1,9 @@
-/* CSS for the overall document layout */
+/* Styling for the overall document layout */
 
 html {
   box-sizing: border-box;
 }
+
 *, *:before, *:after {
   box-sizing: inherit;
 }
@@ -13,7 +14,6 @@ body {
   background-color: #f4f1ec;
   font-size: 16px;
   font-family: 'Source Sans Pro', sans-serif;
-  overflow-y: scroll;
 }
 
  main {

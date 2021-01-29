@@ -1,13 +1,13 @@
-/* CSS for the profile header */
+/* Styling for the profile header */
 
 body > header {
-  position: relative;
-  height: 250px;
-  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  position: relative;
+  height: 250px;
+  width: 100%;
   background-image: url('/images/cartographer.png');
   background-color: rgba(95,158,160, 0.6)
 }

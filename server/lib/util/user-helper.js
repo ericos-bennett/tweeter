@@ -1,11 +1,8 @@
 "use strict";
 
 const Chance      = require("chance"),
-  chance      = new Chance();
-
-const md5 = require('md5');
-
-
+  chance          = new Chance();
+  
 module.exports = {
   generateRandomUser: () => {
     const gender    = chance.gender();

@@ -1,4 +1,4 @@
-/* CSS for displayed tweets */
+/* Styling for displayed tweets */
 
 .tweet {
   margin: 2em 0;
@@ -20,13 +20,13 @@
 }
 
 .tweet .user-handle {
-  margin-left: auto;
   display: none;
+  margin-left: auto;
 }
 
 .tweet p {
-  border-bottom: 4px solid rgb(118, 118, 118);
   padding-bottom: 0.5em;
+  border-bottom: 4px solid rgb(118, 118, 118);
   word-wrap: break-word;
 }
 
@@ -37,9 +37,9 @@
 }
 
 .tweet .time-since-post {
-  font-size: 0.75em;
   display: inline-flex;
   align-items: center;
+  font-size: 0.75em;
 }
 
 .tweet .icons {

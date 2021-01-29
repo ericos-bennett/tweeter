@@ -1,13 +1,13 @@
-/* CSS for the tweet submission form */
+/* Styling for the tweet submission form */
 
 .new-tweet {
   display: none;
 }
 
-.new-tweet > form {
-  margin-top: 1.5em;
+.new-tweet form {
   display: flex;
   flex-direction: column;
+  margin-top: 1.5em;
 }
 
 #tweet-text {
@@ -23,25 +23,26 @@
   outline-width: 0;
 }
 
-.new-tweet > form div {
-  font-family: 'Bungee', cursive;
+.new-tweet form div {
   display: flex;
   justify-content: space-between;
+  font-family: 'Bungee', cursive;
 }
 
-.new-tweet > form button {
+.new-tweet form button {
   background-color: #4056A1;
   color: #FFFFFF;
   border: none;
   border-radius: 4px;
+  cursor: pointer;
 }
 
 #error-box {
-  height: 2em;
-  margin: 1em 0;
   display: flex;
   align-items: center;
   justify-content: center;
+  height: 2em;
+  margin: 1em 0;
   border: 3px solid red;
   color: red;
   font-weight: 600;

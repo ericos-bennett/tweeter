@@ -1,6 +1,9 @@
-/* CSS for Tweeter's navbar */
+/* Styling for the navbar */
 
 nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   position: fixed;
   top: 0;
   z-index: 99;
@@ -8,9 +11,6 @@ nav {
   height: 60px;
   padding: 1em;
   color: #FFFFFF;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   opacity: 100%;
 }
 
@@ -31,6 +31,16 @@ nav {
   padding: 0.5em;
 }
 
+nav i {
+  font-size: 0.8em;
+  position: absolute;
+  left: 50%;
+  top: 75%;
+  transform: translate(-50%, 0);
+  animation: updown 2s ease infinite;
+  color: rgb(131, 65, 21)
+}
+
 @keyframes updown {
   0% {
     transform: translateY(0);
@@ -41,14 +51,4 @@ nav {
   100% {
     transform: translateY(0);
   }
-}
-
-nav i {
-  font-size: 0.8em;
-  position: absolute;
-  left: 50%;
-  top: 75%;
-  transform: translate(-50%, 0);
-  animation: updown 2s ease infinite;
-  color: rgb(131, 65, 21)
 }

@@ -1,4 +1,4 @@
-/* Media queries for tablets and larger */
+/* Media queries for tablet view and larger */
 
 @media screen and (min-width: 600px) {
 
@@ -15,7 +15,7 @@
   }
 
   #profile-hex {
-    width: unset;
+    width: 256px;
   }
 
   #header-profile-photo {
@@ -51,7 +51,7 @@
     margin: calc(80px + 2em) 2em 0 2em
   }
 
-  .new-tweet > form {
+  .new-tweet form {
     margin-top: 0;
     margin-bottom: 2em;
   }
