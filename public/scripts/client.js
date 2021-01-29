@@ -5,8 +5,8 @@ $(document).ready(() => {
 
   // Initialize constants for the signed in user
   const user = {
-    name: 'Eric Bennett',
-    handle: '@ericos',
+    name: 'Søren Kierkegaard',
+    handle: '@eitheror',
     avatars: 'https://i.imgur.com/DVpDmdR.png'
   };
 
@@ -71,6 +71,27 @@ $(document).ready(() => {
     $('#tweet-text').focus();
   });
 
+  // Refresh...
+  const refreshCharCounter = () => {
+    
+    const textLength = $('#tweet-text').val().length;
+    const counter = $('#tweet-text').siblings('div').children('.counter');
+
+    counter.html(140 - textLength);
+
+    if (textLength > 140) {
+      counter.css('color', 'red');
+    } else {
+      counter.css('color', 'unset');
+    }
+
+  };
+
+  // Handler to refresh character count on textarea input
+  $('#tweet-text').on('input', function() {
+    refreshCharCounter();
+  });
+
   // Tweet submission handler
   $('.new-tweet form').on('submit', function(event) {
     
@@ -80,7 +101,7 @@ $(document).ready(() => {
     if ($('#tweet-text').val().trim() === '' || $('#tweet-text').val() === null) {
       showErrorBox('Please enter a message for your tweet');
     } else if ($('#tweet-text').val().length > 140) {
-      showErrorBox('Your tweet is too long (max 140 characters)');
+      showErrorBox('Your tweet is too long (max 140 chars)');
     } else {
 
       $('#error-box').slideUp(function() {
@@ -100,6 +121,7 @@ $(document).ready(() => {
       }).then((result) => {
         createTweetElement(result).hide().prependTo('#tweets-container').slideDown();
         $('#tweet-text').val('');
+        refreshCharCounter();
       }).catch(err => {
         console.log(err);
       });

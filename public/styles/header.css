@@ -2,24 +2,31 @@
 
 body > header {
   position: relative;
-  /* margin-top: 80px; */
-  height: 400px;
+  height: 250px;
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-image: url('/images/bright-squares.png');
-  background-color: rgba(131, 65, 21, 0.787);
+  background-image: url('/images/cartographer.png');
+  background-color: rgba(95,158,160, 0.6)
+}
+
+#profile-hex {
+  width: 160px;
+}
+
+#header-profile-photo {
+  position: absolute;
+  width: 80px;
+  left: 50%;
+  transform: translate(-50%, 50%);
 }
 
 #header-username {
   margin: 0;
 }
 
-#header-profile-photo {
-  position: absolute;
-  width: 128px;
-  left: 50%;
-  transform: translate(-50%, 50%);
+body > header br {
+  display: none;
 }

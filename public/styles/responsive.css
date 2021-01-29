@@ -1,0 +1,69 @@
+/* Media queries for tablets and larger */
+
+@media screen and (min-width: 600px) {
+
+  body {
+    font-size: 24px;
+  }
+
+  nav {
+    height: 80px;
+  }
+
+  body > header {
+    height: 400px;
+  }
+
+  #profile-hex {
+    width: unset;
+  }
+
+  #header-profile-photo {
+    width: 128px;
+  }
+
+  body > header br {
+    display: unset;
+  }
+
+}
+
+/* Media queries for desktop view */
+
+@media screen and (min-width: 1024px) {
+   
+  body {
+    display: flex;
+  }
+
+  nav {
+    background-color: #4056A1;
+    padding: 1.5em;
+  }
+
+  body > header {
+    margin: calc(80px + 2em) 2em 2em 2em;
+    width: 60%;
+    max-width: 400px;
+  }
+
+  main {
+    margin: calc(80px + 2em) 2em 0 2em
+  }
+
+  .new-tweet > form {
+    margin-top: 0;
+    margin-bottom: 2em;
+  }
+
+  #error-box {
+    margin-top: 0;
+  }
+
+  .tweet {
+    margin-top: 0
+  }
+
+ }
+
+

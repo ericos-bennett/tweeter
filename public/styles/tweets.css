@@ -53,7 +53,7 @@
 
 .tweet:hover {
   box-shadow: 10px 10px rgba(64,86,161,0.2);
-  font-weight: 600;
+  color: rgb(30, 30, 30)
 }
 
 .tweet:hover .user-handle {
