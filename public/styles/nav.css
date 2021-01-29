@@ -38,7 +38,7 @@ nav i {
   top: 75%;
   transform: translate(-50%, 0);
   animation: updown 2s ease infinite;
-  color: rgb(131, 65, 21)
+  color: rgb(210,105,30)
 }
 
 @keyframes updown {
